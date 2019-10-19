@@ -14,6 +14,7 @@ var warnsdorff = function warnsdorff() {
         data.board[i][j] = 0;
       }
     }
+
     console.log(data.board);
   }
 
