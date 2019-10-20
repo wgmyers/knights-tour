@@ -40,9 +40,14 @@ var warnsdorff = function warnsdorff() {
     console.log(data.board);
   }
 
+  // Make board visible to subsequent scripts
+  function get_board() {
+    return data.board;
+  }
 
   return {
-    init: init
+    init: init,
+    get_board: get_board
   }
 
 }();
