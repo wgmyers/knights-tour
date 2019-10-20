@@ -6,6 +6,14 @@ var warnsdorff = function warnsdorff() {
     board: []
   };
 
+  function random_start() {
+    rx = Math.floor(Math.random() * 8);
+    ry = Math.floor(Math.random() * 8);
+
+    calculate_path(rx, ry);
+
+  }
+
   function corner_start() {
     // Calculate Knights Tour from corner
     calculate_path(0, 0);
@@ -129,10 +137,11 @@ var warnsdorff = function warnsdorff() {
   return {
     init: init,
     get_board: get_board,
-    corner_start: corner_start
+    corner_start: corner_start,
+    random_start: random_start
   }
 
 }();
 
 warnsdorff.init();
-warnsdorff.corner_start();
+warnsdorff.random_start();
