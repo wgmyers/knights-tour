@@ -12,7 +12,7 @@ var board = function board() {
   // Primitive ASCII representation for now
   function draw() {
     var bdiv = document.querySelector("#board");
-    var msg = "<p>Board</p>";
+    var msg = "<p>Board</p><pre>";
     data.board.forEach(function(item, index) {
       item = item.map(function(x) {
         if (x < 10) {
@@ -24,7 +24,7 @@ var board = function board() {
       msg += item.join(" ");
       msg += "\n";
     })
-    msg = "<pre>" + msg + "</pre>";
+    msg = msg + "</pre>";
     bdiv.innerHTML = msg;
   }
 
