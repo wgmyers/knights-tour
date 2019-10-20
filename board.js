@@ -14,6 +14,13 @@ var board = function board() {
     var bdiv = document.querySelector("#board");
     var msg = "<p>Board</p>";
     data.board.forEach(function(item, index) {
+      item = item.map(function(x) {
+        if (x < 10) {
+          return "0" + x.toString();
+        } else {
+          return x.toString();
+        }
+      });
       msg += item.join(" ");
       msg += "\n";
     })
