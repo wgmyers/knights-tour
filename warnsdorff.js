@@ -9,8 +9,8 @@ var warnsdorff = function warnsdorff() {
   // random_start
   // Calculate tour from random start point
   function random_start() {
-    rx = Math.floor(Math.random() * data.width);
-    ry = Math.floor(Math.random() * data.height);
+    var rx = Math.floor(Math.random() * data.width);
+    var ry = Math.floor(Math.random() * data.height);
 
     calculate_path(rx, ry);
 
